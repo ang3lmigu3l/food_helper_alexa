@@ -1,25 +1,20 @@
 'use strict';
 
 var Alexa = require('alexa-sdk');
-var APP_ID = undefined; // TODO replace with your app ID (OPTIONAL).
+var APP_ID = "arn:aws:lambda:us-east-1:670878965267:function:myMexicanRecipes";
 var recipes = require('./recipes');
 
 exports.handler = function(event, context, callback) {
     var alexa = Alexa.handler(event, context);
     alexa.APP_ID = APP_ID;
-    // To enable string internationalization (i18n) features, set a resources object.
     alexa.resources = languageStrings;
     alexa.registerHandlers(handlers);
     alexa.execute();
 };
 
 var handlers = {
-    //Use LaunchRequest, instead of NewSession if you want to use the one-shot model
-    // Alexa, ask [my-skill-invocation-name] to (do something)...
     'LaunchRequest': function () {
         this.attributes['speechOutput'] = this.t("WELCOME_MESSAGE", this.t("SKILL_NAME"));
-        // If the user either does not reply to the welcome message or says something that is not
-        // understood, they will be prompted again with this text.
         this.attributes['repromptSpeech'] = this.t("WELCOME_REPROMPT");
         this.emit(':ask', this.attributes['speechOutput'], this.attributes['repromptSpeech'])
     },
@@ -82,8 +77,8 @@ var languageStrings = {
     "en": {
         "translation": {
             "RECIPES": recipes.RECIPE_EN_US,
-            "SKILL_NAME": "Mexican Food Helper",
-            "WELCOME_MESSAGE": "Welcome to %s. You can ask for Mexican food recipes like, what\'s the recipe for fish tacos? ... Now, what can I help you with.",
+            "SKILL_NAME": "Taco Tuesday Helper",
+            "WELCOME_MESSAGE": "Welcome to %s. You can ask for taco recipes like, what\'s the recipe for fish tacos? ... Now, what can I help you with.",
             "WELCOME_REPROMPT": "For instructions on what you can say, please say help me.",
             "DISPLAY_CARD_TITLE": "%s  - Recipe for %s.",
             "HELP_MESSAGE": "You can ask questions such as, what\'s the recipe, or, you can say exit...Now, what can I help you with?",
@@ -99,7 +94,7 @@ var languageStrings = {
     "en-US": {
         "translation": {
             "RECIPES" : recipes.RECIPE_EN_US,
-            "SKILL_NAME" : "Mexican Food Helper"
+            "SKILL_NAME" : "Taco Tuesday Helper"
         }
     }
 };
