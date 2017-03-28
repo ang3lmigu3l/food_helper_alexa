@@ -1,0 +1,10 @@
+RecipeIntent i want to try {Recipe}
+RecipeIntent i choose {Recipe}
+RecipeIntent id like to try {Recipe}
+RecipeIntent I want to make {Recipe}
+RecipeIntent help me with {Recipe}
+RecipeIntent how can i make {Recipe}
+RecipeIntent give me recipe for {Recipe}
+RecipeIntent tell me how to make {Recipe}
+RecipeIntent how to make  {Recipe}
+RecipeOnlyIntent {Recipe}

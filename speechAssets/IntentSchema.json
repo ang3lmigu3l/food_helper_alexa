@@ -1,0 +1,36 @@
+{
+    "intents": [
+        {   "intent":  "RecipeIntent",
+            "slots": [
+             { 
+                "name": "Item",
+                "type": "LIST_OF_ITEMS"
+             }
+         ]
+        },
+        {
+            "intent": "RecipeOnlyIntent",
+            "slots":[
+                {
+                    "name": "Item",
+                    "type": "LIST_OF_ITEMS"
+                }
+            ]
+        },
+        {
+            "intent": "DontKnowIntent"
+        },
+        {
+            "intent": "AMAZON.StartOverIntent"
+        },
+        {
+            "intent": "AMAZON.RepeatIntent"
+        },
+        {
+            "intent": "AMAZON.StopIntent"
+        },
+        {
+            "intent": "AMAZON.CancelIntent"
+        }
+    ]
+}
