@@ -1,27 +1,23 @@
 
 {
-  "name": "skill-sample-nodejs-howto-i18n",
+  "name": "Taco Tuesday Helper",
   "version": "1.0.0",
-  "description": "How-to skill sample i18n version",
+  "description": "recipe for making tacos",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexa/skill-sample-nodejs-howto.git"
+    "url": "https://github.com/ang3lmigu3l/food_helper_alexa"
   },
   "keywords": [
     "Alexa",
     "skill",
     "howto"
   ],
-  "author": "Amazon.com",
+  "author": "Miguel Angel Quintana",
   "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/alexa/skill-sample-nodejs-howto/issues"
-  },
-  "homepage": "https://github.com/alexa/skill-sample-nodejs-howto#readme",
   "dependencies": {
     "alexa-sdk": "^1.0.6"
   }

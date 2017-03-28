@@ -17,6 +17,7 @@ var handlers = {
         this.attributes['speechOutput'] = this.t("WELCOME_MESSAGE", this.t("SKILL_NAME"));
         this.attributes['repromptSpeech'] = this.t("WELCOME_REPROMPT");
         this.emit(':ask', this.attributes['speechOutput'], this.attributes['repromptSpeech'])
+        console.log(JSON.parse(event));
     },
     'RecipeIntent': function () {
         var itemSlot = this.event.request.intent.slots.Item;
