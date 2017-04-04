@@ -1,4 +1,3 @@
-
 {
   "name": "Taco Tuesday Helper",
   "version": "1.0.0",
@@ -19,6 +18,8 @@
   "author": "Miguel Angel Quintana",
   "license": "Apache-2.0",
   "dependencies": {
-    "alexa-sdk": "^1.0.6"
+    "alexa-sdk": "^1.0.6",
+    "express": "^4.15.2",
+    "request": "^2.81.0"
   }
 }
